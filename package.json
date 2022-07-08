@@ -4,8 +4,8 @@
   "description": "",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "npm run clear && parcel build index.html",
+    "start": "vite",
+    "build": "vite build",
     "lint": "eslint src/**/*.js",
     "format": "prettier --write src/**/*.js",
     "format:lint": "npm run format && npm run lint",
@@ -31,6 +31,24 @@
   "babel": {
     "presets": [
       "nano-react-app"
-    ]
-  }
-}
+    ],
+    "plugins":[
+      [
+      "@babel/plugin-proposal-class-properties",
+      {
+      "loose":true
+      },
+      "yt1"
+      ],
+      [
+      "@babel/plugin-proposal-private-methods",
+      {
+      "loose":true
+      },
+      "yt2"
+      ]
+      ]
+      }
+    }
+  
+
